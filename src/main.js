@@ -1,6 +1,9 @@
-import "../styles/global.css"
+import "./form.js"
+
+// style
 import "../styles/base.css"
 import "../styles/copy.css"
-import "../styles/loading.css"
 import "../styles/form.css"
+import "../styles/global.css"
+import "../styles/loading.css"
 import "../styles/transcription.css"
