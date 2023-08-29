@@ -2,8 +2,8 @@ import { pipeline } from "@xenova/transformers"
 
 import { loadingMessage } from "./loading"
 
-import data from "./data.json"
-// let data = null
+// import data from "./data.json"
+let data = null
 
 export async function transcribeAudio(videoId) {
   const options = {
@@ -21,11 +21,11 @@ export async function transcribeAudio(videoId) {
     )
     console.log("[START_TRANSCRIBE]")
 
-    // const transcriber = await pipeline(
-    //   "automatic-speech-recognition",
-    //   "Xenova/whisper-small"
-    // )
-    // data = await transcriber(`./${videoId}.mp3`, options)
+    const transcriber = await pipeline(
+      "automatic-speech-recognition",
+      "Xenova/whisper-small"
+    )
+    data = await transcriber(`./${videoId}.mp3`, options)
   } catch (err) {
     console.log("[ERROR_TRANSCRIBE]", err)
     throw new Error(err)
