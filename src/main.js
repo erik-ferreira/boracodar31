@@ -1,4 +1,5 @@
 import "./form.js"
+import "./copy.js"
 
 // style
 import "../styles/base.css"
